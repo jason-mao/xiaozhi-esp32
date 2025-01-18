@@ -338,6 +338,7 @@ void Application::Start() {
             ESP_LOGW(TAG, "服务器的音频采样率 %d 与设备输出的采样率 %d 不一致，重采样后可能会失真",
                 protocol_->server_sample_rate(), codec->output_sample_rate());
         }
+        ESP_LOGE(TAG, "Change the decorder rate:%d", protocol_->server_sample_rate() );
         SetDecodeSampleRate(protocol_->server_sample_rate());
         // 物联网设备描述符
         last_iot_states_.clear();
@@ -485,7 +486,7 @@ void Application::OutputAudio() {
         if (!opus_decoder_->Decode(std::move(opus), pcm)) {
             return;
         }
-
+         ESP_LOGI(TAG, "Decode pcm:%d, rate:%d", pcm.size(), opus_decode_sample_rate_);
         // Resample if the sample rate is different
         if (opus_decode_sample_rate_ != codec->output_sample_rate()) {
             int target_size = output_resampler_.GetOutputSamples(pcm.size());
@@ -610,7 +611,7 @@ void Application::SetDecodeSampleRate(int sample_rate) {
 
     opus_decode_sample_rate_ = sample_rate;
     opus_decoder_ = std::make_unique<OpusDecoderWrapper>(opus_decode_sample_rate_, 1);
-
+    ESP_LOGE(TAG, "MJX:Set sample rate %d", opus_decode_sample_rate_);
     auto codec = Board::GetInstance().GetAudioCodec();
     if (opus_decode_sample_rate_ != codec->output_sample_rate()) {
         ESP_LOGI(TAG, "Resampling audio from %d to %d", opus_decode_sample_rate_, codec->output_sample_rate());

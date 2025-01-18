@@ -1,0 +1,112 @@
+DEFAULT ENC:
+
+
+| Task | Run Time | Percentage
+| afe_mase         |   170929 |    8%
+| main             |     1279 |    0%
+| background_task  |   459069 |   22%
+| IDLE0            |   451093 |   22%
+| IDLE1            |   347371 |   17%
+| tiT              |     7746 |    0%
+| mqtt_task        |     1030 |    0%
+| main_loop        |   386593 |   19%
+| audio_detection  |   118935 |    5%
+| audio_communica  |    21176 |    1%
+| LVGL             |     2498 |    0%
+| ipc1             |        0 |    0%
+| ipc0             |        0 |    0%
+| Tmr Svc          |     2536 |    0%
+| wifi             |    13386 |    0%
+| esp_timer        |    16352 |    0%
+| sys_evt          |        0 |    0%
+| pthread          |        0 |    0%
+
+
+
+| Task | Run Time | Percentage
+| main             |     1258 |    0%
+| background_task  |   466781 |   23%
+| IDLE0            |   457185 |   22%
+| IDLE1            |   370431 |   18%
+| tiT              |     7473 |    0%
+| mqtt_task        |     1004 |    0%
+| main_loop        |   398718 |   19%
+| afe_mase         |   164017 |    8%
+| audio_detection  |   108474 |    5%
+| audio_communica  |    21935 |    1%
+| LVGL             |     2389 |    0%
+| ipc0             |        0 |    0%
+| sys_evt          |        0 |    0%
+| wifi             |    13713 |    0%
+| Tmr Svc          |     2512 |    0%
+| esp_timer        |    16263 |    0%
+| pthread          |        0 |    0%
+| ipc1             |        0 |    0%
+
+
+
+ESP ENC+RSP:
+
+| Task | Run Time | Percentage
+| main             |     1487 |    0%
+| afe_mase         |   170906 |    8%
+| IDLE0            |   445776 |   22%
+| IDLE1            |   582966 |   28%
+| tiT              |     7563 |    0%
+| mqtt_task        |     1054 |    0%
+| main_loop        |   397119 |   19%
+| audio_detection  |   124890 |    6%
+| audio_communica  |    20995 |    1%
+| LVGL             |     2911 |    0%
+| ipc0             |        0 |    0%
+| pthread          |        0 |    0%
+| wifi             |    13470 |    0%
+| Tmr Svc          |     3051 |    0%
+| background_task  |   230417 |   11%
+| esp_timer        |    16713 |    0%
+| sys_evt          |        0 |    0%
+| ipc1             |        0 |    0%
+
+
+| Task | Run Time | Percentage
+| main             |     1443 |    0%
+| IDLE0            |   450329 |   22%
+| IDLE1            |   581990 |   28%
+| tiT              |     8205 |    0%
+| mqtt_task        |     1005 |    0%
+| main_loop        |   394101 |   19%
+| audio_communica  |    20867 |    1%
+| afe_mase         |   162173 |    8%
+| audio_detection  |   119724 |    5%
+| LVGL             |     2541 |    0%
+| ipc0             |        0 |    0%
+| pthread          |        0 |    0%
+| wifi             |    13655 |    0%
+| background_task  |   247500 |   12%
+| Tmr Svc          |     2998 |    0%
+| esp_timer        |    16685 |    0%
+| sys_evt          |        0 |    0%
+| ipc1             |        0 |    0%
+
+
+DEFAULT DEC:
+
+| Task | Run Time | Percentage
+| main             |     1258 |    0%
+| IDLE0            |   478240 |   23%
+| IDLE1            |   787775 |   39%
+| LVGL             |     1935 |    0%
+| mqtt_task        |     1000 |    0%
+| audio_communica  |       40 |    0%
+| main_loop        |   213281 |   10%
+| background_task  |   205661 |   10%
+| afe_mase         |   163389 |    8%
+| audio_detection  |   118464 |    5%
+| tiT              |     2613 |    0%
+| ipc0             |        0 |    0%
+| pthread          |     4803 |    0%
+| wifi             |     4724 |    0%
+| Tmr Svc          |     2618 |    0%
+| esp_timer        |    15051 |    0%
+| sys_evt          |        0 |    0%
+| ipc1             |        0 |    0%
