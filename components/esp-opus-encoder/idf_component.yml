@@ -1,5 +1,5 @@
 dependencies:
-  78/esp-opus: ^1.0.4
+  # 78/esp-opus: ^1.0.4
   idf: ^5.3
 description: ESP32 Opus Encoder C++ wrapper
 files:

@@ -5,7 +5,7 @@ idf_component_register(
         "opus_resampler.cc"
     INCLUDE_DIRS
         "include"
-    PRIV_INCLUDE_DIRS
-        "."
+    # PRIV_INCLUDE_DIRS
+    #     "."
     REQUIRES esp_audio_effects esp_audio_codec
 )

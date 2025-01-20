@@ -6,7 +6,7 @@
 #include <memory>
 #include <cstdint>
 
-#include "opus.h"
+// #include "opus.h"
 #include "esp_opus_enc.h"
 
 #define MAX_OPUS_PACKET_SIZE 1500
@@ -24,7 +24,7 @@ public:
     void ResetState();
 
 private:
-    struct OpusEncoder* audio_enc_ = nullptr;
+    // struct OpusEncoder* audio_enc_ = nullptr;
     esp_audio_enc_handle_t opus_enc_ = nullptr;
     int frame_size_;
     std::vector<int16_t> in_buffer_;

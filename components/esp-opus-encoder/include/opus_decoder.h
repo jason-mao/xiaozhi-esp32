@@ -5,7 +5,7 @@
 #include <vector>
 #include <cstdint>
 
-#include "opus.h"
+// #include "opus.h"
 #include "esp_audio_dec.h"
 
 
@@ -18,8 +18,8 @@ public:
     void ResetState();
 
 private:
-    struct OpusDecoder* audio_dec_ = nullptr;
-    // esp_audio_dec_handle_t audio_dec_ = nullptr;
+    // struct OpusDecoder* audio_dec_ = nullptr;
+    esp_audio_dec_handle_t audio_dec_ = nullptr;
     int frame_size_;
 };
 

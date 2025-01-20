@@ -1,5 +1,5 @@
 #include "opus_resampler.h"
-#include "silk_resampler.h"
+// #include "silk_resampler.h"
 #include "esp_log.h"
 #include "esp_ae_rate_cvt.h"
 

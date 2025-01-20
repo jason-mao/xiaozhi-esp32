@@ -134,7 +134,7 @@ void OpusEncoderWrapper::Encode(std::vector<int16_t>&& pcm, std::function<void(s
             return;
         }
         opus.resize(out.encoded_bytes);
-        ESP_LOGE(TAG, "Encode audio, frame_size_:%d, sz:%d", frame_size_, opus.size());
+        ESP_LOGD(TAG, "Encode audio, frame_size_:%d, sz:%d", frame_size_, opus.size());
         if (handler != nullptr) {
             handler(std::move(opus));
         }

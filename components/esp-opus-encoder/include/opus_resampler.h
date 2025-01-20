@@ -2,8 +2,8 @@
 #define OPUS_RESAMPLER_H
 
 #include <cstdint>
-#include "opus.h"
-#include "resampler_structs.h"
+// #include "opus.h"
+// #include "resampler_structs.h"
 
 class OpusResampler {
 public:
@@ -18,7 +18,7 @@ public:
     int output_sample_rate() const { return output_sample_rate_; }
 
 private:
-    silk_resampler_state_struct resampler_state_;
+    // silk_resampler_state_struct resampler_state_;
     int input_sample_rate_;
     int output_sample_rate_;
 };
